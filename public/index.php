@@ -3,7 +3,6 @@
 ob_start();
 
 require_once '../vendor/autoload.php';
-require_once '../app/HandlerTarGz.php';
 require_once 'layout.html';
 
 use app\HandlerTarGz;
