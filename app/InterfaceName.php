@@ -6,5 +6,5 @@ namespace app;
 
 interface InterfaceName
 {
-	public function Tararchive();
+	public function tararchive();
 }

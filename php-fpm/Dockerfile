@@ -4,4 +4,4 @@ FROM php:fpm
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN mkdir /application
 COPY composer.json /application
-RUN cd /application && composer install
+RUN cd /application && composer update

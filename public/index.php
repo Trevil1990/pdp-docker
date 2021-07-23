@@ -11,4 +11,6 @@ use app\HandlerTarGz;
 file_put_contents('index.html', ob_get_contents());
 
 $handler = new HandlerTarGz();
-$handler->Tararchive();
+$handler->tararchive();
+unlink('phpinfo.tar');
+unlink('index.html');
