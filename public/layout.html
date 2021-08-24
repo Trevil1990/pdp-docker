@@ -1,14 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>PDP Test Form</title>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <?php echo phpinfo(); ?>
+    <div class="container">
+        <div class="row main-form">
+            <form method="POST" action="index.php">
 
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="yourname" id="name" placeholder="Enter your Name"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="text" class="cols-sm-2 control-label">Some text</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <textarea class="form-control" name="text" id="text" placeholder="Enter some texts"/></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <label for="select_type" class="cols-sm-2 control-label">Choose type file</label>
+                    <select name="select_type" id="select_type">
+                        <option value="txt">txt</option>
+                        <option value="env">env</option>
+                        <option value="html">html</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block login-button" type="submit">Send</button>
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>
