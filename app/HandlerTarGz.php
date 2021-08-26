@@ -8,15 +8,14 @@ use PharData;
 
 class HandlerTarGz implements InterfaceName
 {
-	public $filename = 'index.html';
 
 	public function tararchive ($filename)
 	{
 		try {
-			$a = new PharData('phpinfo.tar');
+			$a = new PharData('info.tar');
 
 			// ADD FILES TO archive.tar FILE
-			$a->addFile($this->filename);
+			$a->addFile($filename);
 
 			// COMPRESS archive.tar FILE. COMPRESSED FILE WILL BE archive.tar.gz
 			$a->compress(Phar::GZ);
